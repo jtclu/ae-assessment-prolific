@@ -1,0 +1,9 @@
+models:
+
+  - name: int_clients
+    description: client table with contract details where applicable
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - client_id
+            - report_month

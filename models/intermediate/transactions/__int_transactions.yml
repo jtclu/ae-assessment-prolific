@@ -1,0 +1,31 @@
+models:
+
+  - name: int_transactions_chargebacks
+    description: transactions representing chargebacks
+    columns:
+      - name: chargeback_transaction_id
+        description: primary key of the chargeback transactions intermediate table
+
+  - name: int_transactions_fraud
+    description: transactions representing fraud
+    columns:
+      - name: fraud_transaction_id
+        description: primary key of the fraud transactions intermediate table
+
+  - name: int_transactions_payments
+    description: transactions representing gross merchandise value before refunds
+    columns:
+      - name: transaction_id
+        description: primary key of the payment transactions intermediate table
+      - name: linked_transaction_id
+        description: transaction if payment was subsquently refunded partially or in full
+        data_tests:
+          - relationships: ## alerts if linked transactions cannot be associated with refund 
+              to: ref('int_transactions_refunds')
+              field: refund_transaction_id
+
+  - name: int_transactions_refunds
+    description: transactions representing refunds of payments
+    columns:
+      - name: refund_transaction_id
+        description: primary key of the refunds transactions intermediate table
