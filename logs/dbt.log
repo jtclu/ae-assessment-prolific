@@ -1,0 +1,44 @@
+[0m19:50:16.081903 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212DD42D160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212DB23C190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212DE4BFD90>]}
+
+
+============================== 19:50:16.085803 | b30ec4ad-a167-469f-ba12-b20abb3ae1fd ==============================
+[0m19:50:16.085803 [info ] [MainThread]: Running with dbt=1.10.11
+[0m19:50:16.086770 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'profiles_dir': 'C:\\Users\\umami\\Repos\\ae-assessment-prolific', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'cache_selected_only': 'False', 'target_path': 'None', 'version_check': 'True', 'invocation_command': 'dbt debug', 'log_format': 'default', 'use_colors': 'True', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'empty': 'None', 'use_experimental_parser': 'False', 'printer_width': '80', 'quiet': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\umami\\Repos\\ae-assessment-prolific\\logs', 'write_json': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m19:50:16.113850 [info ] [MainThread]: dbt version: 1.10.11
+[0m19:50:16.114769 [info ] [MainThread]: python version: 3.13.3
+[0m19:50:16.125644 [info ] [MainThread]: python path: C:\Users\umami\repos\venv\Scripts\python.exe
+[0m19:50:16.127075 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m19:50:16.296633 [info ] [MainThread]: Using profiles dir at C:\Users\umami\Repos\ae-assessment-prolific
+[0m19:50:16.297151 [info ] [MainThread]: Using profiles.yml file at C:\Users\umami\Repos\ae-assessment-prolific\profiles.yml
+[0m19:50:16.297612 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\umami\Repos\ae-assessment-prolific\dbt_project.yml
+[0m19:50:16.298673 [info ] [MainThread]: adapter type: sqlite
+[0m19:50:16.299123 [info ] [MainThread]: adapter version: 1.10.0
+[0m19:50:16.428954 [info ] [MainThread]: Configuration:
+[0m19:50:16.429719 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:50:16.430276 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m19:50:16.430756 [info ] [MainThread]: Required dependencies:
+[0m19:50:16.431248 [debug] [MainThread]: Executing "git --help"
+[0m19:50:16.476424 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:50:16.477201 [debug] [MainThread]: STDERR: "b''"
+[0m19:50:16.477826 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:50:16.478822 [info ] [MainThread]: Connection:
+[0m19:50:16.479375 [info ] [MainThread]:   database: database
+[0m19:50:16.479721 [info ] [MainThread]:   schema: main
+[0m19:50:16.480130 [info ] [MainThread]:   schemas_and_paths: {'main': 'target/global_transactions.db'}
+[0m19:50:16.480544 [info ] [MainThread]:   schema_directory: target
+[0m19:50:16.481130 [info ] [MainThread]: Registered adapter: sqlite=1.10.0
+[0m19:50:16.867547 [debug] [MainThread]: Acquiring new sqlite connection 'debug'
+[0m19:50:20.327310 [debug] [MainThread]: Using sqlite connection "debug"
+[0m19:50:20.327884 [debug] [MainThread]: On debug: select 1 as id
+[0m19:50:20.328256 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:50:20.330004 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m19:50:20.330936 [debug] [MainThread]: On debug: Close
+[0m19:50:20.331312 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m19:50:20.332660 [info ] [MainThread]: [32mAll checks passed![0m
+[0m19:50:20.333659 [debug] [MainThread]: Command `dbt debug` succeeded at 19:50:20.333544 after 4.54 seconds
+[0m19:50:20.333949 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:50:20.334234 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212DFB48510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212DF84AD50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000212DF76FF00>]}
+[0m19:50:20.334590 [debug] [MainThread]: Flushing usage events
+[0m19:50:20.712314 [debug] [MainThread]: An error was encountered while trying to flush usage events
