@@ -1,0 +1,19 @@
+models:
+
+# views designed specifically for BI monitoring
+
+  - name: vw_revenue_by_client_monthly
+    description: monthly aggregated revenue per client table 
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - client_id
+            - report_month
+
+  - name: vw_gross_merchandise_value_by_client_monthly
+    description: gross transaction values including resolved chargebacks aggregated by month only 
+    columns:
+      - name: report_month
+        description: The month of transactions
+        data_tests:
+          - not_null

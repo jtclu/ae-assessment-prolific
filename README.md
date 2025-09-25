@@ -49,3 +49,18 @@ The final mart model should provide monthly revenue recognition with:
 - Total GMV in GBP
 - Spend threshold tracking
 - Discount application status
+
+## Results - notes
+
+The final mart models consist of 
+- pre-aggregated dimensional models that can rapidly evolve for changes in business definitions
+- bi models (prefixed vw_) aggregated at a monthly grain answering questions from key requirements & expected output
+
+To build the tables in global_transactions.db run the following dbt commands in venv:
+
+1. dbt deps
+2. dbt seed
+3. dbt build 
+
+Most assumptions are commented in model for ease of following
+Key data quality tests and table descriptions are included, although going forward I would want to also include column and table metadata

@@ -1,0 +1,37 @@
+models:
+  - name: stg_client_contracts
+    description: contract details for each client
+    columns:
+      - name: client_id
+        description: The unique key for each client
+        data_tests:
+          - not_null
+          - unique
+
+  - name: stg_currency_rates
+    description: historical currency exchange rates to GBP
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - currency
+            - rate_date
+
+  - name: stg_transaction_resolutions
+    description: status of transaction resolutions, pending until resolution_date is available
+    columns:
+      - name: transaction_id
+        data_tests:
+          - not_null
+          - unique
+
+  - name: stg_transactions
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - transaction_id
+            - transaction_type
+    columns:
+      - name: transaction_id
+        data_tests:
+          - not_null
+          - unique

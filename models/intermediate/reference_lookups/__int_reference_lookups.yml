@@ -1,0 +1,16 @@
+models:
+
+  - name: int_currency_rates
+    description: slowly changing dimension table for currencies converting to GBP as base
+    columns:
+      - name: currency
+        description: currency of the transaction
+      - name: exchange_rate_to_gbp
+        description: exchange rate for converting the currency to GBP
+      - name: valid_from
+        description: date on which the exchange rate became valid
+      - name: valid_to
+        description: date on which the exchange rate is no longer valid
+
+  - name: int_calendar_months
+    description: calendar months covering 2 years since January 2024

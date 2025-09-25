@@ -1,0 +1,18 @@
+models:
+
+  - name: fact_transactions
+    description: transactions and applicable fees contains all transaction types except frauds, refunds and unresolved chargebacks
+    columns:
+      - name: transaction_id
+        description: primary key of the fact table
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_clients
+    description: monthly snapshot of the client details including contract details and cumulative transactional stats
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - client_id
+            - report_month
